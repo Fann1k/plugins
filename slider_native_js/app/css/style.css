@@ -1,0 +1,15 @@
+#slide {
+    max-width: 512px;
+    margin: 0 auto;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.slide-single {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    transition: all ease 1s;
+    left: 0;
+    top: 0;
+}
