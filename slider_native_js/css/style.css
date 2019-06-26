@@ -1,0 +1,40 @@
+.slider-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    max-width: 500px;
+    height: 375px;
+    position: relative;
+    margin: 50px auto;
+}
+
+.slide {
+    width: 100%;
+    opacity: 1;
+    position: absolute;
+    transition: all ease 1s;
+}
+
+.opacity0 {
+    opacity: 0;
+}
+
+.btn-slider-left,
+.btn-slider-right {
+    position: absolute;
+    font-size: 36px;
+    line-height: 0;
+    top: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-slider-left {
+    left: 250px;
+}
+
+.btn-slider-right {
+    right: 250px;
+}
