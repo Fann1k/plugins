@@ -39,6 +39,6 @@ function moveRight() {
         current = 0;
     } else {
         current++;
-        slider();
     }
+    slider();
 }
