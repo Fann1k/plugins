@@ -6,26 +6,39 @@ let images = document.querySelectorAll('.slide'),
 function slider() {
     images.forEach(element => {
         element.classList.add('opacity0');
+        element.ontouchmove = function (event) {
+            let x = event.touches[0].clientX,
+                y = event.touches[0].clientY;
+            if (x--) {
+                moveLeft();
+            } else {
+                moveRight();
+            }
+        };
     });
     images[current].classList.remove('opacity0');
+
 }
 
 slider();
 
-btnLeft.onclick = function () {
+btnLeft.onclick = moveLeft;
+btnRight.onclick = moveRight;
+
+function moveLeft() {
     if (current - 1 == -1) {
         current = images.length - 1;
     } else {
         current--;
     }
     slider();
-};
+}
 
-btnRight.onclick = function () {
+function moveRight() {
     if (current + 1 == images.length) {
         current = 0;
     } else {
         current++;
         slider();
     }
-};
+}
