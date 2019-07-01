@@ -2,10 +2,9 @@ const gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     cleanCSS = require('gulp-clean-css'),
     config = {
-        root: './app/',
+        root: './src/',
         css: {
-            watchLess: 'precss/**/*.less',
-            watchCss: 'precss/**/*.css',
+            watch: 'precss/**/*.less',
             src: 'precss/styles.less',
             dest: 'css'
         },
@@ -42,8 +41,7 @@ gulp.task('build', function (done) {
 });
 
 gulp.task('watch:styles', function () {
-    gulp.watch(config.root + config.css.watchLess, gulp.series('build')); //берет ./src/precss/**/*.css делает с ним 'build' + можно еще что-то после build добавить
-    gulp.watch(config.root + config.css.watchCss, gulp.series('build'));
+    gulp.watch(config.root + config.css.watch, gulp.series('build')); //берет ./src/precss/**/*.css делает с ним 'build' + можно еще что-то после build добавить
 });
 gulp.task('watch:html', function () {
     gulp.watch(config.root + config.html).on('change', browserSync.reload);

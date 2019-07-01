@@ -2,23 +2,28 @@ const smartgrid = require('smart-grid');
 
 smartgrid('./app/precss', {
     columns: 12,
-    offset: "60px",
-    mobileFirst: false,
+    offset: "15px",
     container: {
-        maxWidth: "1000px"
+        maxWidth: "1600px"
     },
     breakPoints: {
+        lg: {
+            width: "1200px",
+            fields: "30px"
+        },
         md: {
-            width: "892px",
+            width: "992px",
+            fields: "30px"
         },
         sm: {
-            width: "720px",
+            width: "720px"
         },
         xs: {
             width: "576px",
+            fields: "15px"
         },
         xxs: {
-            width: "320px",
+            width: "320px"
         }
     }
 });
