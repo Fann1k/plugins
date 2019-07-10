@@ -16,7 +16,7 @@ smartgrid('./app/precss', {
             fields: "30px"
         },
         sm: {
-            width: "720px"
+            width: "768px"
         },
         xs: {
             width: "576px",
